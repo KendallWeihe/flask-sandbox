@@ -1,14 +1,10 @@
-FROM ubuntu
-
-RUN apt-get update -y && \
-    apt-get install -y python3-pip python-dev
+FROM python
 
 COPY ./requirements.txt /app/requirements.txt
+COPY . /app
 WORKDIR /app
 
 RUN pip install -r requirements.txt
-
-COPY . /app
 
 EXPOSE 5000
 

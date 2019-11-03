@@ -14,4 +14,4 @@ def get_dummy_data(name):
     return jsonify(json.loads(f.read()))
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
